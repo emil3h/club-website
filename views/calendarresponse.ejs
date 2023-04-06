@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title><%= title %></title>
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='stylesheets/main.css'>
+    <link rel='stylesheet' href='stylesheets/mobile/calendarresponse.css'>
+    <link rel='stylesheet' href='stylesheets/desktop/calendarresponse.css'>
+</head>
+<body>
+    <section id='calendar-response'>
+        <h1 class='app-title'>CS Class Scheduling App</h1>
+        <p class='response'><%= response %></p>
+        <a id='home-button' href='/'>HOME</a>
+    </section>
+    <section id='desktop-calendar-response'>
+        <h1 class='app-title'>CS Class Scheduling App</h1>
+        <p class='response'><%= response %></p>
+        <a id='home-button' href='/'>HOME</a>
+    </section>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- javascripts -->
+    <script src='javascripts/main.js'></script>
+</body>
+</html>

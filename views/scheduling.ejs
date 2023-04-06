@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>CS Class Scheduling</title>
+    <link rel='stylesheet' href='stylesheets/scheduling.css'>
+</head>
+<body>
+    <h1 class='app-title'>CS Class Scheduling App</h1>
+
+    <form id='classSelect' action='/cs-class-submission' method='POST'>
+        <div id='class-selection-border'>
+            <div class='class-selection-container'>
+                <div id='dropdown-container'>
+                    <span id='anchor'><em>Select Class</em></span>
+                    <ul class='dropdown hidden-options'>
+                        <!-- This unordered list will be dynamically filled by JS -->
+                    </ul>
+                </div>
+                <div class='class-display-container'>
+    
+                </div>
+            </div>
+        </div>
+        
+        <div id='shopping-cart-container'>
+            <div id='shopping-cart-selection-container' class='hidden-shopping-cart-selection-container'>
+                <h1 id='shopping-cart-title' class='hidden-shopping-cart-title'>SHOPPING CART</h1>
+                <ul id='shopping-cart-selection' class='hidden-shopping-cart-selection'>
+                </ul>
+            </div>
+            <img src='images/blue background gradient.svg' alt='' id='blue-background-gradient' class='visible-blue-background'>
+            <img src='images/shopping cart.svg' alt='Shopping Cart' id='shopping-cart'>
+            <input type='submit' value='Add to Google Calendar' id='submit-button' class='hidden-submit-button'>
+        </div>
+    </form>
+
+    <!-- <div id='shopping-cart-container'>
+        <div id='shopping-cart-selection-container' class='hidden-shopping-cart-selection-container'>
+            <h1 id='shopping-cart-title' class='hidden-shopping-cart-title'>SHOPPING CART</h1>
+            <ul id='shopping-cart-selection' class='hidden-shopping-cart-selection'>
+            </ul>
+        </div>
+        <img src='images/blue background gradient.svg' alt='' id='blue-background-gradient' class='visible-blue-background'>
+        <img src='images/shopping cart.svg' alt='Shopping Cart' id='shopping-cart'>
+        <input type='submit' value='Add to Google Calendar'>
+    </div> -->
+
+    <script>
+        let csClasses = <%- csClasses %> ;
+        let classSearchNames = <%- classSearchNames %>;
+        let form = document.getElementById('classSelect');
+        let classListDropdown = document.getElementsByClassName('dropdown')[0];
+        let classDisplayContainer = document.getElementsByClassName('class-display-container')[0];
+
+        // Dynamically add class entries to the html form
+        classSearchNames.forEach(className => {
+            let optionContainer = document.createElement('li');
+            optionContainer.setAttribute('class', 'class-option-container not-selected');
+            optionContainer.innerHTML = className;
+
+            classListDropdown.appendChild(optionContainer);
+        });
+
+        /**
+         * create each section container for each section of each class
+         */
+        let index = 1;
+        csClasses.forEach(csClass => {
+            let sectionContainer = document.createElement('div');
+            let sectionInfo = document.createElement('div');
+            sectionContainer.setAttribute('class', 'section-container hidden-section-container');
+            sectionInfo.setAttribute('class', 'section-info');
+            // create new data attribute for catalog number of class section
+            let catalogNum = document.createAttribute('data-catalog-number');
+            catalogNum.value = csClass.catalogNumber;
+            sectionContainer.setAttributeNode(catalogNum);
+
+            /**
+             * create part of section container that holds the course ID, section number, and meeting dates and times
+             */
+            let sectionDescription1 = document.createElement('ul');
+            sectionDescription1.setAttribute('class', 'section-description-1')
+            let courseID = document.createElement('li');
+            courseID.innerHTML = `<strong>Class</strong>126813`;
+
+            let sectionNumber = document.createElement('li');
+            sectionNumber.innerHTML = `<strong>Section</strong>${csClass.sectionNumber}`;
+
+            let meetingDays = document.createElement('li');
+            // reformat meeting days to display
+            meetingDaysFormatted = '';
+            csClass.classDays.split(',').forEach(day => {
+                meetingDaysFormatted += day;
+            });
+            meetingDays.innerHTML = `<strong>Days & Times</strong>${meetingDaysFormatted} ${csClass.startTime12Hour} - ${csClass.endTime12Hour}`;
+
+            let meetingDates = document.createElement('li');
+            let startDate = new Date(csClass.start);
+            let endDate = new Date(csClass.end);
+            meetingDates.innerHTML = `<strong>Meeting Dates</strong>${startDate.getMonth() + 1}/${startDate.getDate()}/${startDate.getFullYear()}` +
+                ` - ${endDate.getMonth() + 1}/${endDate.getDate()}/${endDate.getFullYear()}`
+            // console.log(csClass.name, '    ', meetingDays.innerHTML, '    ', meetingDates.innerHTML);
+
+            sectionDescription1.appendChild(courseID);
+            sectionDescription1.appendChild(sectionNumber);
+            sectionDescription1.appendChild(meetingDays);
+            sectionDescription1.appendChild(meetingDates);
+            sectionInfo.appendChild(sectionDescription1);
+
+            /**
+             * create part of the description that holds the instructor's name, room number, instruction mode, and description
+             */
+            let sectionDescription2 = document.createElement('ul');
+            sectionDescription2.setAttribute('class', 'section-description-2');
+            let sectionDescription2Headers = document.createElement('ul');
+            sectionDescription2Headers.setAttribute('class', 'section-description-2-headers');
+            let sectionDescription2Values = document.createElement('ul');
+            sectionDescription2Values.setAttribute('class', 'section-description-2-values');
+
+            let sectionInstructorHeader = document.createElement('li');
+            // sectionInstructorHeader.setAttribute('class', 'section-instructor-header');
+            sectionInstructorHeader.innerHTML = `<strong>Instructor</strong>`;
+            let sectionInstructorValue = document.createElement('li');
+            sectionInstructorValue.innerHTML = `${csClass.professor}`;
+
+            let sectionInstructionModeHeader = document.createElement('li');
+            // sectionInstructionModeHeader.setAttribute('class', 'section-instruction-mode-header');
+            sectionInstructionModeHeader.innerHTML = `<strong>Instruction Mode</strong>`;
+            let sectionInstructionModeValue = document.createElement('li');
+            sectionInstructionModeValue.innerHTML = `${csClass.instructionMode}`;
+
+
+            sectionDescription2Headers.appendChild(sectionInstructorHeader);
+            sectionDescription2Headers.appendChild(sectionInstructionModeHeader);
+            sectionDescription2Values.appendChild(sectionInstructorValue);
+            sectionDescription2Values.appendChild(sectionInstructionModeValue);
+            sectionDescription2.appendChild(sectionDescription2Headers);
+            sectionDescription2.appendChild(sectionDescription2Values);
+            sectionInfo.appendChild(sectionDescription2);
+            sectionContainer.appendChild(sectionInfo);
+
+            /**
+             * create the button to add classes to cart
+             */
+            let addClassButton = document.createElement('div');
+            addClassButton.setAttribute('class', 'add-class-button');
+            // add custom attributes to the add to cart button to indicate which class is being added to the user's google calendar
+            catalogNum = document.createAttribute('data-catalog-number');
+            catalogNum.value = csClass.catalogNumber;
+            addClassButton.setAttributeNode(catalogNum);
+            let arrayIndex = document.createAttribute('data-array-index');
+            arrayIndex.value = index;
+            addClassButton.setAttributeNode(arrayIndex);
+            index++;
+            let section = document.createAttribute('data-section');
+            section.value = csClass.sectionNumber;
+            addClassButton.setAttributeNode(section);
+            let instructor = document.createAttribute('data-instructor');
+            instructor.value = csClass.professor;
+            addClassButton.setAttributeNode(instructor);
+            let meetDays = document.createAttribute('data-meet-days');
+            meetDays.value = `${meetingDaysFormatted}`;
+            addClassButton.setAttributeNode(meetDays);
+            let meetTimes = document.createAttribute('data-meet-times');
+            meetTimes.value = `${csClass.startTime12Hour} - ${csClass.endTime12Hour}`;
+            addClassButton.setAttributeNode(meetTimes);
+            
+            let buttonVerticalBar = document.createElement('div');
+            buttonVerticalBar.setAttribute('class', 'button-vertical-bar');
+            let buttonHorizontalBar = document.createElement('div');
+            buttonHorizontalBar.setAttribute('class', 'button-horizontal-bar');
+
+            // button event listener to change the color of plus sign on the button
+            addClassButton.addEventListener('mouseover', () => {
+                buttonVerticalBar.classList.add('button-cross-hover');
+                buttonHorizontalBar.classList.add('button-cross-hover');
+            });
+            addClassButton.addEventListener('mouseout', () => {
+                buttonVerticalBar.classList.remove('button-cross-hover');
+                buttonHorizontalBar.classList.remove('button-cross-hover');
+            });
+
+
+            addClassButton.appendChild(buttonVerticalBar);
+            addClassButton.appendChild(buttonHorizontalBar);
+            sectionContainer.appendChild(addClassButton);
+
+            classDisplayContainer.appendChild(sectionContainer);
+        });
+    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src='javascripts/scheduling.js'></script>
+</body>
+</html>

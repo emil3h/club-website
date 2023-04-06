@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>CSS @ Cal Poly Pomona</title>
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='stylesheets/main.css'>
+    <link rel='stylesheet' href='stylesheets/index.css'>
+</head>
+<body>
+<!-- Top horizontal navigation bar -->
+<nav class='header'>
+    <!-- Logo -->
+    <a class='smoothScroll' href='#top'>
+        <img src='images/logo.png' alt='logo' class='navbar-logo'>
+    </a>
+    <!-- Mobile hamburger menu -->
+    <div class='hamburger-menu-container'>
+        <div class='hamburger-menu-line'></div>
+        <div class='hamburger-menu-line'></div>
+    </div>
+    <!-- Container for the actual navigation bar -->
+    <div class='navbar-container'>
+        <!-- mobile button to exit navigation menu -->
+        <div class='navigation-menu-exit-wrapper'>
+            <div class='navigation-menu-exit-line-1'></div>
+            <div class='navigation-menu-exit-line-2'></div>
+        </div>
+        <ul class='navbar'>
+            <li class='navbar-item'>
+                <!-- Home page link -->
+                <a class='navbar-link smoothScroll' href='#top'>home</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- About section link -->
+                <a class='navbar-link smoothScroll' href='#about'>about</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Mission link -->
+                <a class='navbar-link smoothScroll' href='#mission'>mission</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- E-board link -->
+                <a class='navbar-link smoothScroll' href='#e-board'>e-board</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Events link -->
+                <a class='navbar-link smoothScroll' href='#events'>events</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Projects link -->
+                <a class='navbar-link smoothScroll' href='#projects'>projects</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Contact us link -->
+                <a class='navbar-link smoothScroll' href='#contact-us'>contact us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- scroll indicator and click to scroll to next section -->
+<div class='scroll-indicator-container'>
+    <p class='scroll-indicator'>Next</p>
+    <a class='arrow smoothScroll' href='#about'></a>
+</div>
+<!-- Home page -->
+<header id='top'>
+    <!-- Separate club logo for mobile website -->
+    <img src='images/logo.png' alt='logo' class='mobile-logo'>
+
+    <!-- Website Title and header -->
+    <div class='inner'>
+        <p>ASSOCIATION FOR COMPUTING MACHINERY CHAPTER</p>
+        <h1>COMPUTER SCIENCE SOCIETY</h1>
+        <h5>CAL POLY POMONA</h5>
+
+        <a class='button smoothScroll' href='#about'>LEARN MORE</a>
+    </div>
+</header>
+<!-- About section first page -->
+<section id='about'>
+    <h1 class='about-title'><span class='about-title-text'>Did you know</span><span class='about-question-mark'>?</span></h1>
+
+    <!-- blue line under question mark -->
+    <div class='about-blue-line'></div>
+
+    <!-- computer/keyboard gif -->
+    <img src='images/cssgif.gif' alt='computer with typing text animation gif' class='about-computer'>
+
+    <!-- paragraph description about the club -->
+    <div class='about-desc-wrapper'>
+        <p class='about-desc'>Computer Science Society is the oldest organization at Cal Poly Pomona. We are one of the largest clubs that host events regularly and advise our members on the next path to success. Our motto is “Connect passion to empathy“.</p>
+    </div>
+</section>
+<!-- Mission section -->
+<section id='mission'>
+    <div class='mission-title-container'>
+        <h1 class='mission-title'>OUR MISSION</h1>
+    </div>
+
+    <!-- Card grid -->
+    <div class='card-container'>
+        <div class='card-column' id='mission-card-column-1'>
+            <div class='mission-card'>
+                <h4 class='mission-card-title'>Connectivity</h4>
+                <p class='mission-card-description'>Connectivity, both socially and technically, is
+                something in which our club focuses on as we prioritize providing our members
+                with the opportunity to connect and build networks with professionals and peers.
+                These connections allow them to reach new heights, and technology aids our club
+                with connecting to the world, allowing members to enhance their knowledge and
+                experience. We aim to unite our students and create an inclusive environment
+                where they will strive the most.</p>
+                <img src='images/globe.svg' alt='globe' class='mission-card-image
+                first-mission-card-image'>
+            </div>
+        </div>
+        <div class='card-column' id='mission-card-column-2'>
+            <div class='mission-card'>
+                <h4 class='mission-card-title'>Development</h4>
+                <p class='mission-card-description'>Continuous technological advancement is a crucial
+                driving force for society. During this tech storm, the improvement of resources
+                and tools is always a goal in the industry. We aim to spread knowledge on this
+                development through many of our activities. Whether they are technical or social
+                development activities, we believe that the tools we provide will enhance one’s
+                knowledge in both their technical and non-technical skills and ultimately guiding
+                them to become a better person, one day at a time.</p>
+                <img src='images/upchart.svg' alt='upward trend' class='mission-card-image'>
+            </div>
+        </div>
+        <div class='card-column' id='mission-card-column-3'>
+            <div class='mission-card'>
+                <h4 class='mission-card-title'>Innovation</h4>
+                <p class='mission-card-description'>As the world is actively evolving, we need to prepare
+                for these changes and adapt to them as fast as we can. The key for innovation
+                lies in the hands of future generations pursuing a role in the tech industry and
+                how keen they are in detecting, analyzing, and solving global problems. To
+                prepare for a vastly improving and innovating industry, our club promotes
+                life-long active learning to build robust and timeless skill sets. Therefore, we
+                strive to emphasize how significant and inventive new tech solutions are to
+                society.</p>
+                <img src='images/brain.svg' alt='Innovative Thinking' 
+                class='mission-card-image'>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- E-Board section -->
+<section id='e-board'>
+    <!-- Title -->
+    <h1 class='mobile-e-board-title'>MEET OUR E-BOARD</h1>
+    <div class='e-board-section-container'>
+        <!-- Title -->
+        <h1 class='desktop-e-board-title'>MEET OUR E-BOARD</h1>
+        <div class='e-board-description-container'>
+            <div class='e-board-description-carousel'>
+                <!-- Thuan, Club President -->
+                <div class='e-board-description e-board-description-active'>
+                    <!-- Officer Titles -->
+                    <h2 class='officer-title'>President</h2>
+                    <!-- Officer Bio -->
+                    <p>Hi everyone, my name is Thuan (Dustin) Le. I am a transferred fourth-year
+                    student here at Cal Poly Pomona and currently serving as the president for
+                    the Computer Science Society in the CS department. Prior to becoming the club
+                    president, I served as an intern in the Computer Science Society and
+                    joined multiple CS and non-CS clubs on campus. My initiative coming in to
+                    this club was to help create an inclusive and equal environment where students
+                    get to learn new things about technology and innovate to solve problems.</p>
+                </div>
+                <!-- Ricky, Club Vice-President -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Vice President</h2>
+                    
+                    <p>Hello there, my name is Ricky Fok! I was the previous Treasurer and now the current
+                    Vice President of the Computer Science Society. I am a second-year computer science
+                    student here at Cal Poly Pomona, and I hope our club can assist you in your courses,
+                    inspire ideas, and educate you about the vast field of computer science. I look forward
+                    to working with each and every one of you in any way that I can, cheers!</p>
+                </div>
+                <!-- Ashley, Secretary -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Secretary</h2>
+                    
+                    <p>Hello everyone, my name is Ashley Yu, I am a third-year CS student here at Cal Poly
+                    Pomona and I am going to be graduating this year. I am currently the secretary of CSS
+                    and I will be joining the workforce soon as a Software Engineer for Northrop Grumman. I
+                    hope that I will be able to meet as many fellow CS students as possible before I leave
+                    CPP to further expand our knowledge in the field in innovative ways.</p>
+                </div>
+                <!-- Prathista, Treasurer -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Treasurer</h2>
+                    
+                    <p id='prathista'>Hey everyone! My name is Prathista Annapareddi, and I am currently a third-year
+                    Computer Science major here at Cal Poly Pomona. As the treasurer of CSS, I am
+                    excited to be able to provide opportunities for members to network with important
+                    in-field mentors and have access to resources and workshops that will help them
+                    grow and satisfy their academic curiosity. I was first exposed to CS and coding at
+                    a young age and soon fell in love with technology. One of the main reasons I decided to
+                    pursue a CS degree was because of the endless possibilities CS provides
+                    to anyone and everyone with access to the knowledge and technology. I have a love
+                    for learning new languages that has allowed me to learn how to understand and speak
+                    over 5 languages and driven me to learn how to code in Python, Java, C++, etc. I hope
+                    to work in the field of Cybersecurity in the future. I am looking forward to helping
+                    our club members through their journey as a CS major here at CPP. I believe a priority
+                    is to strive to create a warm and connected environment where members can learn from
+                    one another and foster communication and growth, both academically and socially.</p>
+                </div>
+                <!-- Sandra, Historian -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Historian</h2>
+                    
+                    <p>Hello everyone, my name is Sandra Masannat and I am currently a third-year Computer
+                    Science major here at Cal Poly Pomona. I am serving as the historian of CSS and have
+                    previously been a Quality Assurance Intern at the Naval Welfare Surface Center-Corona
+                    and am currently working on a collaboration project with Northrop Grumman through our
+                    school! I hope our club can help you during your journey as a CS major as we aim to
+                    create an environment where one can learn new things and take advantage of what we have
+                    to offer.</p>
+                </div>
+                <!-- Ketan, Public Relations -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Public Relations</h2>
+                    
+                    <p id='ketan'>Hey everyone, my name is Ketan Joshi and I am currently a second-year student at Cal
+                    Poly Pomona majoring in Computer Science. I have been fascinated by the world of
+                    technology ever since I was kid, starting with my interest in video games and how much
+                    I would play on the computer. In my free time, I like to play video games, hang out
+                    with friends, work out, play basketball, and go on long drives while blasting my music.
+                    In the future, I hope to do work and research in the field of Artificial Intelligence.
+                    As someone who loves to interact and connect with various people, I want to bring and 
+                    emphasize this important concept as a core club value.</p>
+                </div>
+                <!-- Yennhi, Webmaster -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Webmaster</h2>
+
+                    <p>My name is Yennhi Dang and I'm a second-year CS major. I love front-end development because it is one of the
+                    many ways I can put my creative tendencies to use. I strive to become better with time and experience. I
+                    designed the CSS website and hope you guys like it!</p>
+                </div>
+                <!-- Luke, Webmaster -->
+                <div class='e-board-description e-board-description-inactive'>
+                    <h2 class='officer-title'>Webmaster</h2>
+
+                    <p>Hey guys, my name is Luke Dinh and I'm a first-year CS major. I don't know what I really want to do for a
+                    career yet, and I hope I figure that out in the time that I spend with the club. Besides programming, I like to
+                    work out and play video games with my friends. I wrote all the HTML, CSS, and Javascript required to make the
+                    website you're looking at right now! If you have any suggestions on improving our club website, please feel free
+                    to tell me or Yennhi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='e-board-gallery-container'>
+        <div class='e-board-gallery'>
+            <img src='images/Thuan.jpg' alt='Thuan' class='e-board-picture'>
+            <img src='images/Ricky.jpg' alt='Ricky' class='e-board-picture
+            e-board-picture-inactive'>
+            <img src='images/Ashley.jpg' alt='Ashley' class='e-board-picture
+            e-board-picture-inactive'>
+            <img src='images/Prathista.png' alt='Prathista' class='e-board-picture
+            e-board-picture-inactive'>
+            <img src='images/Sandra.png' alt='Sandra' class='e-board-picture
+            e-board-picture-inactive'>
+            <img src='images/Ketan.jpg' alt='Ketan' class='e-board-picture
+            e-board-picture-inactive'>
+            <img src='images/Yennhi.jpg' alt='Yennhi' class='e-board-picture e-board-picture-inactive'>
+            <img src='' alt='Luke' class='e-board-picture e-board-picture-inactive'>
+        </div>
+        <div class='e-board-gallery-controls-container'>
+                <div class='e-board-gallery-button' id='e-board-gallery-left-button'>
+                    <img class='e-board-gallery-controls' src='images/left arrow.svg' alt='left arrow'>
+                </div>
+                <div class='e-board-gallery-button' id='e-board-gallery-right-button'>
+                    <img class='e-board-gallery-controls' src='images/right arrow.svg' alt='right arrow'>
+                </div>
+        </div>
+        <p class='e-board-gallery-counter'>1 / 8</p>
+    </div>
+</section>
+<!-- Events section -->
+<section id='events'>
+    <!-- background to be changed for mobile design -->
+    <div class='events-mobile-background events-mobile-background-inactive'></div>
+    <!-- Mobile grid -->
+    <div class='events-title-container'>
+        <h1 class='events-title'>EVENTS</h1>
+    </div>
+    <p class='events-semester'>Semester: Fall 2020</p>
+    <!-- These are separate hidden events item containers for the mobile design -->
+    <!-- Computer Science Society Project Initiative (CSSPI) -->
+    <div class='mobile-events-desc-container' id='mobile-csspi'>
+        <p class='mobile-events-item'>Computer Science Society Project Initiative (CSSPI)</p>
+        <div class='mobile-tooltip'><p>This series of events is to help students apply
+        their useful skills that they can learn outside of classes to solve something
+        interesting. Whether in education, the environment, or of their own problems. This
+        project initiative represents learning by doing. An example is learning the latest
+        frameworks and applying them to your full potential.</p></div>
+    </div>
+    <!-- Web Design -->
+    <div class='mobile-events-desc-container' id='mobile-web-design'>
+        <p class='mobile-events-item'>Web Design</p>
+        <div class='mobile-tooltip'>If you are interested in learning how to design a
+        website and want to showcase some of your meaningful skills as part of our club, we
+        would love your contribution in making our website more innovative and interactive.
+        This event is to walk you through building a website and showcase it as part of our
+        club’s projects showcase.</div>
+    </div>
+    <!-- Speaker Events -->
+    <div class='mobile-events-desc-container' id='mobile-speaker'>
+        <p class='mobile-events-item'>Speaker Events</p>
+        <div class='mobile-tooltip'>Want to know what it is like working as a Software
+        Engineer, Product Manager or Data Scientist? We have a series of speaker events where
+        each speaker will walk you through their experiences, talk about their daily
+        routines, and even share some of their advice to us students.</div>
+    </div>
+    <!-- Recruiter Events -->
+    <div class='mobile-events-desc-container' id='mobile-recruiter'>
+        <p class='mobile-events-item'>Recruiter Events</p>
+        <div class='mobile-tooltip'>We want to ensure that you have some opportunities
+        besides what is already provided by the school to make connections with recruiters
+        who are interested in the work you are doing. You will get to learn about the
+        company’s culture and an opportunity to ask questions to help you learn more about
+        the company.</div>
+    </div>
+    <!-- Workshops -->
+    <div class='mobile-events-desc-container' id='mobile-workshops'>
+        <p class='mobile-events-item'>Workshops</p>
+        <div class='mobile-tooltip'>Occasionally, there will be events where you get
+        to see other professionals apply their skills, either technically or some skills
+        assessments to guide you to the right paths. We hold technical workshops such as web
+        development, AI Implementation, and other career development for you to explore.</div>
+    </div>
+    <div class='mobile-events-grid'>
+        <div class='mobile-events-button-container' id='first-mobile-event'>
+            <p class='mobile-event-title'>CSSPI</p>
+            <p class='read-more'>Read more</p>
+            <div class='mobile-events-circle'></div>
+        </div>
+        <div class='mobile-events-button-container' id='second-mobile-event'>
+            <p class='mobile-event-title'>Speaker Events</p>
+            <p class='read-more'>Read more</p>
+            <div class='mobile-events-circle'></div>
+        </div>
+        <div class='mobile-events-button-container' id='third-mobile-event'>
+            <p class='mobile-event-title'>Workshops</p>
+            <p class='read-more'>Read more</p>
+            <div class='mobile-events-circle'></div>
+        </div>
+        <div class='mobile-events-button-container' id='fourth-mobile-event'>
+            <p class='mobile-event-title'>Recruiter Events</p>
+            <p class='read-more'>Read more</p>
+            <div class='mobile-events-circle'></div>
+        </div>
+        <div class='mobile-events-button-container' id='fifth-mobile-event'>
+            <p class='mobile-event-title'>Web Design</p>
+            <p class='read-more'>Read more</p>
+            <div class='mobile-events-circle'></div>
+        </div>
+    </div>
+    
+        <!-- Main desktop grid -->
+    <div class='events-grid'>
+        <div class='events-title-container'>
+            <h1 class='events-title'>EVENTS</h1>
+        </div>
+        <!-- Computer Science Society Project Initiative (CSSPI) -->
+        <div class='events-item-container' id='CSSPI'>
+            <p class='events-click-indicator'>click me</p>
+            <div class='events-click-indicator-line'></div>
+            <p class='events-read-more'>More...</p>
+            <p class='events-item'>Computer Science Society Project Initiative (CSSPI)</p>
+            <div class='tooltip below-tooltip'><p>This series of events is to help students apply
+            their useful skills that they can learn outside of classes to solve something
+            interesting. Whether in education, the environment, or of their own problems. This
+            project initiative represents learning by doing. An example is learning the latest
+            frameworks and applying them to your full potential.</p></div>
+        </div>
+        <!-- Web Design -->
+        <div class='events-item-container' id='web-design'>
+            <p class='events-item'>Web Design</p>
+            <div class='tooltip above-tooltip'>If you are interested in learning how to design a
+            website and want to showcase some of your meaningful skills as part of our club, we
+            would love your contribution in making our website more innovative and interactive.
+            This event is to walk you through building a website and showcase it as part of our
+            club’s projects showcase.</div>
+        </div>
+        <!-- Speaker Events -->
+        <div class='events-item-container' id='speaker'>
+            <p class='events-item'>Speaker Events</p>
+            <div class='tooltip below-tooltip'>Want to know what it is like working as a Software
+            Engineer, Product Manager or Data Scientist? We have a series of speaker events where
+            each speaker will walk you through their experiences, talk about their daily
+            routines, and even share some of their advice to us students.</div>
+        </div>
+        <!-- Recruiter Events -->
+        <div class='events-item-container' id='recruiter'>
+            <p class='events-item'>Recruiter Events</p>
+            <div class='tooltip above-tooltip'>We want to ensure that you have some opportunities
+            besides what is already provided by the school to make connections with recruiters
+            who are interested in the work you are doing. You will get to learn about the
+            company’s culture and an opportunity to ask questions to help you learn more about
+            the company.</div>
+        </div>
+        <!-- Workshops -->
+        <div class='events-item-container' id='workshops'>
+            <p class='events-item'>Workshops</p>
+            <div class='tooltip above-tooltip'>Occasionally, there will be events where you get
+            to see other professionals apply their skills, either technically or some skills
+            assessments to guide you to the right paths. We hold technical workshops such as web
+            development, AI Implementation, and other career development for you to explore.</div>
+        </div>
+        <div class='events-grid-spacer'></div>
+        <div class='events-right-line'></div>
+    </div>
+    <img src='images/old.jpg' alt='' class='events-picture' id='events-picture-1'>
+    <img src='images/icpc.jpg' alt='' class='events-picture' id='events-picture-2'>
+</section>
+<!-- Projects section -->
+<section id='projects'>
+    <div class='projects-title-container'><h1 class='projects-title'>PROJECTS</h1></div>
+    <div class='project-container'>
+        <!-- Project title with two circle shapes on left and right end to insert between white
+        line -->
+        <div class='project-title-container'>
+            <!-- CSS Club's Mobile Application -->
+            <h2 class='project-title'>CSS Club’s Mobile Application</h2>
+            <div class='circle'></div>
+        </div>
+        <ul class='project-description'>
+            <li>
+                Utilizing the Scrum Methodology, we have a group of 12 people, from new to
+                semi-experienced, led by 2 leaders. We divide each team into 2 separate groups,
+                front-end and back-end, to develop this application.
+            </li>
+            <li>
+                Front-end technologies used: React Native, Node.js, Javascript, Axios
+            </li>
+            <li>
+                Back-end technologies used: Flask, Postman, PostgreSQL, AWS EC3, RDS,
+                pgAdmin4, SQLAcademy, TravisCI, Pytest
+            </li>
+            <li>
+                Management Framework used: Google Drive, Trello, Github, Zoom, Discord
+            </li>
+            <li class='button-container'>
+                <a class='button app-demo' href='https://streamable.com/iztzf4' target='_blank'>Mobile Application Demo</a>
+            </li>
+        </ul>
+        <div class='project-media-container'>
+            <img src='images/csspiproject.gif' alt='CSSPI Project' class='project-media'>
+            <p class='project-caption'>Backend database for our club's mobile application</p>
+        </div>
+    </div>
+    <div class='project-container'>
+        <div class='project-title-container' id='second-project'>
+            <!-- CSS Website redesign -->
+            <h2 class='project-title'>CSS Website Redesign</h2>
+            <div class='circle'></div>
+        </div>
+        <ul class='project-description'>
+            <li>
+                In this project, we redesigned the whole club website, handled by two talented persons, one UI/UX designer and the other web developer. This was an ongoing semester project which taught them the basic concepts of web design, version control with GitHub, and important aspects of website maintenance.
+            </li>
+            <li>
+                Front-end technologies used: HTML, CSS, Javascript, JQuery 
+            </li>
+            <li>
+                Web design technologies used: Adobe XD, SVG
+            </li>
+            <li>
+                Management Framework used : Google Drive, Github, Discord
+            </li>
+        </ul>
+        <div class='project-media-container'>
+            <video class='old-website-video' controls>
+                <source src='videos/oldwebsite.mp4' type='video/mp4'>
+            Your browser does not support the video tag.
+            </video>
+            <p class='project-caption'>Our club's website before the redesign</p>
+        </div>
+    </div>
+    <div class='project-container'>
+        <div class='project-title-container' id='second-project'>
+            <!-- CS Class Google Calendar Scheduler Web Application -->
+            <h2 class='project-title'>CS Class Google Calendar Scheduler Web Application</h2>
+            <div class='circle'></div>
+        </div>
+        <ul class='project-description'>
+            <li>
+                This web application lets you choose from a list of all available computer science classes on campus to automatically add to your primary Google Calendar. You can also add
+                an optional zoom link and location to be added to your Google Calendar events for each class!
+            </li>
+            <li>
+                Front-end technologies used: HTML, CSS, Javascript, JQuery 
+            </li>
+            <li>
+                Web design technologies used: Adobe XD, SVG
+            </li>
+            <li>
+                Back-end technologies used: Node.js, ExpressJS, EJS
+            </li>
+            <li>
+                Management Framework used : Google Drive, Github, Discord
+            </li>
+        </ul>
+        <div class='project-media-container'>
+            <video class='old-website-video' controls>
+                <source src='videos/cs-class-scheduler-demo.mov' type='video/mp4'>
+            Your browser does not support the video tag.
+            </video>
+            <p class='project-caption'>A demo of the web application in use</p>
+        </div>
+    </div>
+    <div class='projects-banner-container'>
+        <div class='projects-circle-border-container'>
+            <div class='project-border'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='projects-circle-border-container' id='last'>
+            <div class='project-border'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='decoration-circle-container'>
+            <div class='second-border-width'></div>
+            <div class='second-border-length'></div>
+            <div class='circle decoration-circle size-large' id='circle-1'></div>
+            <div class='circle decoration-circle' id='circle-2'></div>
+            <div class='circle decoration-circle size-medium' id='circle-3'></div>
+            <div class='circle decoration-circle size-medium' id='circle-4'></div>
+            <div class='circle decoration-circle size-small' id='circle-5'></div>
+            <div class='circle decoration-circle size-small' id='circle-6'></div>
+
+
+            <img class='projects-banner' src='images/11377175_10203435304518305_4965010383617393659_n.jpg' alt='Project Banner'>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer id='contact-us'>
+    <div class='footer-container'>
+        <!-- Invisible divs that act like horizontal rules to left and right of comp sci logo -->
+        <div class='footer-outline'></div>
+        <div class='comp-sci-logo'><img src='images/css new logo.png' alt=''></div>
+        <div class='footer-outline'></div>
+        <div class='email-container'>
+            <ul>
+                <li>REACH US AT OUR EMAIL</li>
+                <li>css.cpp.edu@gmail.com</li>
+            </ul>
+            <!-- HTML Form for new club members to input their e-mail to be added to club mailing
+            list -->
+            <div class='email-form'>
+                <!-- placeholder action for PHP file to process user's inputted email to add to mailing list -->
+                <form action=''>
+                    <ul>
+                        <li>BECOME A MEMBER</li>
+                        <!-- This is where users input their email -->
+                        <li><input type='text' id='email-input' name='email' placeholder="Enter your email"></li>
+                    </ul>
+                    <input type='submit' id='email-submit'>
+                </form>
+            </div>
+        </div>
+        <div class='css-socials'>
+            <ul>
+                <li>STAY IN THE LOOP</li>
+                <!-- Instagram link -->
+                <li>
+                    <a href='https://www.instagram.com/cppcss/' target='_blank'>
+                        <img src='images/instagram.svg' alt='instagram'>
+                    </a>
+                    <a class='socials-link' href='https://www.instagram.com/cppcss/' target='_blank'>
+                        cppcss
+                    </a>
+                </li>
+                <!-- Facebook link -->
+                <li>
+                    <a href='https://www.facebook.com/groups/cppcss/' target='_blank'>
+                        <img src='images/facebook.svg' alt='facebook'>
+                    </a>
+                    <a class='socials-link' href='https://www.facebook.com/groups/cppcss/' target='_blank'>
+                        cppcss
+                    </a>
+                </li>
+                <!-- Youtube link -->
+                <li>
+                    <a href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank'>
+                        <img src='images/youtube.svg' alt='youtube'>
+                    </a>
+                    <a class='socials-link' href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank'>
+                        Cal Poly Pomona - Computer Science Society
+                    </a>
+                </li>
+                <!-- Github link -->
+                <li>
+                    <a href='https://github.com/cpp-css' target='_blank'>
+                        <img src='images/github.svg' alt='github'>
+                    </a>
+                    <a class='socials-link' href='https://github.com/cpp-css' target='_blank'>
+                        cpp-css
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Footer navigation links for desktop -->
+        <div class='footer-nav-links'>
+            <ul>
+                <li>
+                    <a href='#top' class='navbar-link smoothScroll'>HOME</a>
+                </li>
+                <li>
+                    <a href='#about' class='navbar-link smoothScroll'>ABOUT</a>
+                </li>
+                <li>
+                    <a href='#e-board' class='navbar-link smoothScroll'>E-BOARD</a>
+                </li>
+                <li>
+                    <a href='#events' class='navbar-link smoothScroll'>EVENTS</a>
+                </li>
+                <li>
+                    <a href='#projects' class='navbar-link smoothScroll'>PROJECTS</a>
+                </li>
+            </ul>
+        </div>
+        <!-- button to scroll to top for mobile -->
+        <a href='#top' class='top-button smoothScroll'>top</a>
+    </div>
+    <!-- small circle shapes for decoration above mobile footer banner -->
+    <div class='decoration-circle-container'>
+        <div class='circle decoration-circle size-medium' id='footer-circle-1'></div>
+        <div class='circle decoration-circle size-medium' id='footer-circle-2'></div>
+        <div class='circle decoration-circle size-medium' id='footer-circle-3'></div>
+        <div class='circle decoration-circle size-small' id='footer-circle-4'></div>
+        <div class='circle decoration-circle size-small' id='footer-circle-5'></div>
+        <div class='circle decoration-circle size-small' id='footer-circle-6'></div>
+    </div>
+    <!-- image for mobile design only -->
+    <img class='mobile-footer-banner' src='images/11377175_10203435304518305_4965010383617393659_n.jpg'
+    alt=''>
+    <div id='copyright'><p>COPYRIGHT 2020 COMPUTER SCIENCE SOCIETY. ALL RIGHTS RESERVED</p></div>
+</footer>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- javascripts -->
+<script src='javascripts/main.js'></script>
+</body>
+</html>

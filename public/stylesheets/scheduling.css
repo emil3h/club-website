@@ -1,0 +1,338 @@
+body {
+    /* background-color: black; */
+}
+
+* {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.app-title {
+    text-align: center;
+}
+
+#classSelect {
+    display: flex;
+    flex-flow: row;
+}
+
+#class-selection-border {
+    transition: all ease-in-out 1.5s;
+    border-radius: 10px;
+    margin-left: 5vw;
+}
+
+.class-selection-container {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    width: 35vw;
+}
+
+/* the clickable dropdown button */
+#anchor {
+    padding: 2px;
+    border: 1px solid gray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    display: inline-block;
+    text-align: left;
+    color: gray;
+    width: 100%;
+    cursor: pointer;
+}
+
+#dropdown-container {
+    padding: 0.7rem;
+    margin-right: 3rem;
+    max-height: 9999px;
+
+    transition: all ease-in-out 1s;
+
+    position: relative;
+}
+
+/* the unordered list for the dropdown */
+.dropdown {
+    padding: 10px;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 10;
+
+    transition: all 1.25s ease-in-out;
+}
+
+.expanded-dropdown {
+    box-shadow: 0 0 5px 4px #cecece;
+}
+
+/* each individual option in dropdown list */
+.class-option-container {
+    margin-bottom: 1rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.class-option-container:hover, 
+.chosen-option-container {
+    font-weight: 700;
+}
+
+.hidden-options {
+    opacity: 0;
+    max-height: 0px;
+}
+
+.visible-options {
+    opacity: 1;
+    border: 1px solid gray;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+
+    max-height: 5000px;
+    background-color: white;
+}
+
+.class-display-container,
+.section-info,
+.section-description-2-headers,
+.section-description-2-values {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.class-display-container {
+    color: #333;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.visible-section-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.hidden-section-container {
+    display: none;
+}
+
+.section-info {
+    margin-bottom: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 25px;
+    padding: 1rem;
+    flex: 1 1 0px;
+    max-width: 80%;
+}
+
+.section-description-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.section-description-1 * {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.section-description-2 {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    text-align: left;
+    padding: 0;
+}
+
+.section-description-2-headers,
+.section-description-2-values {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section-description-2-headers {
+    margin-right: 3rem;
+}
+
+/* button to add classes to cart */
+.add-class-button {
+    cursor: pointer;
+    margin-left: 2rem;
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #8FBAFF;
+}
+
+.add-class-button:hover {
+    background-color: #DEDEDE;
+}
+
+.add-class-button:hover::after {
+    content: 'Add to cart';
+    position: absolute;
+    left: 130%;
+    top: 17%;
+    width: 5.5rem;
+    padding: 0.25rem;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #DEDEDE;
+    font-size: 1rem;
+    transition: all ease-in-out 1.5s;
+}
+
+.button-vertical-bar {
+    position: absolute;
+    width: 3px;
+    height: 1.5rem;
+    background-color: black;
+    top: 25%;
+    left: 47.5%;
+}
+
+.button-horizontal-bar {
+    position: absolute;
+    height: 3px;
+    width: 1.5rem;
+    background-color: black;
+    left: 25%;
+    top: 47.5%;
+}
+
+.button-cross-hover {
+    background-color: white;
+}
+
+#shopping-cart-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25vw;
+    height: 75vh;
+    overflow: hidden;
+}
+
+#shopping-cart-selection-container {
+    background-color: rgba(105, 105, 105, 0.55);
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    text-align: center;
+    z-index: 8;
+    
+    transition: all 0.5s step-start;
+}
+
+.hidden-shopping-cart-selection-container,
+.hidden-blue-background,
+.hidden-submit-button {
+    opacity: 0;
+}
+
+.visible-shopping-cart-selection-container,
+.visible-blue-background,
+.visible-submit-button {
+    opacity: 1;
+}
+
+#shopping-cart {
+    position: absolute;
+    right: 8%;
+    bottom: 3%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#blue-background-gradient {
+    position: absolute;
+    right: -45%;
+    bottom: -45%;
+    width: 35rem;
+    height: 35rem;
+    background: transparent;
+    z-index: 5;
+
+    border-radius: 50%;
+
+    transition: all ease-in-out 0.5s;
+}
+
+#shopping-cart-title {
+    transition: all ease-in-out 0.75s;
+    transition-delay: 0.1s;
+}
+
+.hidden-shopping-cart-title,
+.hidden-shopping-cart-selection,
+.hidden-shopping-cart-item-container {
+    transform: translateX(200%);
+}
+
+.visible-shopping-cart-title,
+.visible-shopping-cart-selection,
+.visible-shopping-cart-item-container {
+    transform: none;
+}
+
+#shopping-cart-selection {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    list-style-type: none;
+    text-align: left;
+
+    width: 90%;
+
+    transition: all ease-in-out 0.75s;
+}
+
+.shopping-cart-item-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: all ease-in-out 0.75s;
+}
+
+.cart-delete-button {
+    margin-right: 10rem;
+}
+
+#submit-button {
+    position: absolute;
+    bottom: 3%;
+    left: 8%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0,0,0,.16);
+
+    border: none;
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: all step-start 0.5s;
+    z-index: 9;
+}
