@@ -1,8 +1,5 @@
-# Sample workflow for building and deploying an Astro site to GitHub Pages
-#
-# To get started with Astro see: https://docs.astro.build/en/getting-started/
-#
-name: Deploy Astro site to Pages
+# Author: GitHub + Amar Gandhi ('24)
+name: Build and deploy site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -47,14 +44,16 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Build with Astro
+      - name: Build using npm
         run: |
           npm run build
         working-directory: ${{ env.BUILD_PATH }}
+      - name: Move build files
+        run: mv ${{ env.BUILD_PATH }}/build/* ${{ env.BUILD_PATH }}/public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ env.BUILD_PATH }}/build
+          path: ${{ env.BUILD_PATH }}/public
 
   deploy:
     environment:
