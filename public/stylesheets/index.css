@@ -337,9 +337,10 @@ header {
     height: auto;
 }
 
+/* Previous change: order: 2 */
 .e-board-section-container {
     overflow: hidden;
-    order: 2;
+    order: 1;
 }
 
 .mobile-e-board-title {
