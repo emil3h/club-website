@@ -686,7 +686,7 @@ header {
 #alumni {
     display: flex;
     flex-flow: column nowrap;
-    height: 100;
+    height: auto;
 }
 
 /* Previous change: order: 2 */
