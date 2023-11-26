@@ -177,8 +177,7 @@
 /* change color of next section indicator arrow in sections with light backgrounds */
 #about .arrow,
 #mission .arrow,
-#e-board .arrow,
-#alumni .arrow {
+#e-board .arrow {
     border-color: black;
 }
 
