@@ -145,7 +145,7 @@
 }
 
 .scroll-indicator {
-    font-size: 1.2rem;
+    font-size: 0.85rem;
     animation-name: scrollIndicatorLoop;
     animation-iteration-count: infinite;
     animation-direction: alternate;
