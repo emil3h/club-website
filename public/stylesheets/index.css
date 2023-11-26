@@ -713,7 +713,9 @@ header {
 
 .alumni-gallery {
     display: flex;
-    align-self: flex-start;
+    align-items: center;
+    /*align-self: flex-start;*/
+    flex-direction: column;
     flex-flow: row nowrap;
     transition: all 0.75s ease-in-out;
     position: relative;
