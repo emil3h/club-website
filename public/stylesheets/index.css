@@ -726,8 +726,8 @@ header {
 .alumni-picture {
     display: initial;
     object-fit: cover;
-    width: 100%;
-    height: auto;
+    width: 50vw;
+    height: 35vh;
     position: absolute;
     left: 0;
     right: 0;
