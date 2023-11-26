@@ -687,6 +687,8 @@ header {
     display: flex;
     flex-flow: column nowrap;
     height: auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* Previous change: order: 2 */
@@ -706,7 +708,6 @@ header {
 
 .alumni-gallery-container {
     overflow: hidden;
-    order: 1;
 }
 
 .alumni-gallery {
@@ -725,9 +726,8 @@ header {
 .alumni-picture {
     display: initial;
     object-fit: cover;
-    width: 50vw;
-    height: 35vh;
-    transition: all 0.75s ease-in-out;
+    width: 100%;
+    height: auto;
     position: absolute;
     left: 0;
     right: 0;
