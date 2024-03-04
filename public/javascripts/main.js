@@ -510,7 +510,7 @@ $(document).ready(function() {
             }
             eboardDescContainer.style.transform = `translateX(${-paragraphSize * counter}px)`;
             // update e-board gallery counter below the pictures
-            eboardCounter.innerHTML = `${counter + 1} / 8`;
+            eboardCounter.innerHTML = `${counter + 1} / 9`;
 
             /* increment counter and add the active photo class and remove the inactive class from the
             element */
@@ -554,7 +554,7 @@ $(document).ready(function() {
             eboardDescriptions[counter].classList.remove('e-board-description-inactive');
 
             // update e-board gallery counter below pictures
-            eboardCounter.innerHTML = `${counter + 1} / 8`;
+            eboardCounter.innerHTML = `${counter + 1} / 9`;
         }
     });
 
