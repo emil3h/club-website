@@ -38,3 +38,11 @@ app.use('/cs-class-scheduling', schedulingRouter);
 app.use('/cs-class-submission', submissionRouter);
 app.use('/calendar-success', calSuccessRouter);
 app.use('/calendar-failure', calFailureRouter);
+
+
+/* Test */
+
+app.get('/views/projectArchives.ejs', (req, res) => {
+  res.render('/views/projectArchives.ejs'); // Render the EJS template for the linked page
+});
+
