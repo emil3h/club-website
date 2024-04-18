@@ -507,6 +507,7 @@
             <p class='project-caption'>Our club's website before the redesign</p>
         </div>
     </div>
+
     <div class='project-container'>
         <div class='project-title-container' id='second-project'>
             <!-- CS Class Google Calendar Scheduler Web Application -->
@@ -539,6 +540,48 @@
             <p class='project-caption'>A demo of the web application in use</p>
         </div>
     </div>
+<!-- ********************************************* -->
+    <div class='project-container'>
+        <div class='project-title-container' id='second-project'>
+            <!-- TEST -->
+            <h2 class='project-title'>Project Archives</h2>
+            <div class='circle'></div>
+        </div>
+
+        <button type="button" class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Open Section 2</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Open Section 3</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+        
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+    </div>
+<!-- ********************************************* -->
+
+
     <div class='projects-banner-container'>
         <div class='projects-circle-border-container'>
             <div class='project-border'></div>
