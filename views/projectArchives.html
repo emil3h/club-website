@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>CSS @ Cal Poly Pomona</title>
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='stylesheets/main.css'>
+    <link rel='stylesheet' href='stylesheets/index.css'>
+    <style>
+        /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+}
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #000000;
+}
+    </style>
+</head>
+<body>
+<!-- Top horizontal navigation bar -->
+<nav class='header'>
+    <!-- Logo -->
+    <a class='smoothScroll' href='#top'>
+        <img src='images/logo.png' alt='logo' class='navbar-logo'>
+    </a>
+    <!-- Mobile hamburger menu -->
+    <div class='hamburger-menu-container'>
+        <div class='hamburger-menu-line'></div>
+        <div class='hamburger-menu-line'></div>
+    </div>
+    <!-- Container for the actual navigation bar -->
+    <div class='navbar-container'>
+        <!-- mobile button to exit navigation menu -->
+        <div class='navigation-menu-exit-wrapper'>
+            <div class='navigation-menu-exit-line-1'></div>
+            <div class='navigation-menu-exit-line-2'></div>
+        </div>
+        <ul class='navbar'>
+            <li class='navbar-item'>
+                <!-- Home page link -->
+                <a class='navbar-link smoothScroll' href='#top'>home</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- About section link -->
+                <a class='navbar-link smoothScroll' href='#about'>about</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Mission link -->
+                <a class='navbar-link smoothScroll' href='#mission'>mission</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- E-board link -->
+                <a class='navbar-link smoothScroll' href='#e-board'>e-board</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Events link -->
+                <a class='navbar-link smoothScroll' href='#events'>events</a>
+            </li>
+            <li class='navbar-item'>
+                <!-- Projects link -->
+                <a class='navbar-link smoothScroll' href='#projects'>projects</a>
+            </li>
+            <!-- 
+            <li class='navbar-item'>
+                <!- - Alumni link - ->
+                <a class='navbar-link smoothScroll' href='#alumni'>alumni</a>
+            </li>
+            -->
+            <li class='navbar-item'>
+                <!-- Contact us link -->
+                <a class='navbar-link smoothScroll' href='#contact-us'>contact us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- scroll indicator and click to scroll to next section -->
+<div class='scroll-indicator-container'>
+    <p class='scroll-indicator'>Next</p>
+    <a class='arrow smoothScroll' href='#about'></a>
+</div>
+<!-- Home page -->
+<header id='top'>
+    <!-- Separate club logo for mobile website -->
+    <img src='images/logo.png' alt='logo' class='mobile-logo'>
+
+    <!-- Website Title and header -->
+    <div class='inner'>
+        <p>ASSOCIATION FOR COMPUTING MACHINERY CHAPTER</p>
+        <h1>COMPUTER SCIENCE SOCIETY</h1>
+        <h5>CAL POLY POMONA</h5>
+
+        <a class='button smoothScroll' href='#about'>LEARN MORE</a>
+    </div>
+</header>
+
+
+<!-- Projects section -->
+<section id='projects'>
+    <div class='projects-title-container'><h1 class='projects-title'>PROJECTS</h1></div>
+    <div class='project-container'>
+        <!-- Project title with two circle shapes on left and right end to insert between white
+        line -->
+        <div class='project-title-container'>
+            <!-- CSS Club's Mobile Application -->
+            <h2 class='project-title'>CSS Club’s Mobile Application</h2>
+            <div class='circle'></div>
+        </div>
+        <ul class='project-description'>
+            <li>
+                Utilizing the Scrum Methodology, we have a group of 12 people, from new to
+                semi-experienced, led by 2 leaders. We divide each team into 2 separate groups,
+                front-end and back-end, to develop this application.
+            </li>
+            <li>
+                Front-end technologies used: React Native, Node.js, Javascript, Axios
+            </li>
+            <li>
+                Back-end technologies used: Flask, Postman, PostgreSQL, AWS EC3, RDS,
+                pgAdmin4, SQLAcademy, TravisCI, Pytest
+            </li>
+            <li>
+                Management Framework used: Google Drive, Trello, Github, Zoom, Discord
+            </li>
+            <li class='button-container'>
+                <a class='button app-demo' href='https://streamable.com/iztzf4' target='_blank'>Mobile Application Demo</a>
+            </li>
+        </ul>
+        <div class='project-media-container'>
+            <img src='images/csspiproject.gif' alt='CSSPI Project' class='project-media'>
+            <p class='project-caption'>Backend database for our club's mobile application</p>
+        </div>
+    </div>
+    <div class='project-container'>
+        <div class='project-title-container' id='second-project'>
+            <!-- CSS Website redesign -->
+            <h2 class='project-title'>CSS Website Redesign</h2>
+            <div class='circle'></div>
+        </div>
+        <ul class='project-description'>
+            <li>
+                In this project, we redesigned the whole club website, handled by two talented persons, one UI/UX designer and the other web developer. This was an ongoing semester project which taught them the basic concepts of web design, version control with GitHub, and important aspects of website maintenance.
+            </li>
+            <li>
+                Front-end technologies used: HTML, CSS, Javascript, JQuery 
+            </li>
+            <li>
+                Web design technologies used: Adobe XD, SVG
+            </li>
+            <li>
+                Management Framework used : Google Drive, Github, Discord
+            </li>
+        </ul>
+        <div class='project-media-container'>
+            <video class='old-website-video' controls>
+                <source src='videos/oldwebsite.mp4' type='video/mp4'>
+            Your browser does not support the video tag.
+            </video>
+            <p class='project-caption'>Our club's website before the redesign</p>
+        </div>
+    </div>
+
+    <div class='project-container'>
+        <div class='project-title-container' id='second-project'>
+            <!-- CS Class Google Calendar Scheduler Web Application -->
+            <h2 class='project-title'>CS Class Google Calendar Scheduler Web Application</h2>
+            <div class='circle'></div>
+        </div>
+        <ul class='project-description'>
+            <li>
+                This web application lets you choose from a list of all available computer science classes on campus to automatically add to your primary Google Calendar. You can also add
+                an optional zoom link and location to be added to your Google Calendar events for each class!
+            </li>
+            <li>
+                Front-end technologies used: HTML, CSS, Javascript, JQuery 
+            </li>
+            <li>
+                Web design technologies used: Adobe XD, SVG
+            </li>
+            <li>
+                Back-end technologies used: Node.js, ExpressJS, EJS
+            </li>
+            <li>
+                Management Framework used : Google Drive, Github, Discord
+            </li>
+        </ul>
+        <div class='project-media-container'>
+            <video class='old-website-video' controls>
+                <source src='videos/cs-class-scheduler-demo.mov' type='video/mp4'>
+            Your browser does not support the video tag.
+            </video>
+            <p class='project-caption'>A demo of the web application in use</p>
+        </div>
+    </div>
+
+
+    <div class='projects-banner-container'>
+        <div class='projects-circle-border-container'>
+            <div class='project-border'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='projects-circle-border-container' id='last'>
+            <div class='project-border'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='decoration-circle-container'>
+            <div class='second-border-width'></div>
+            <div class='second-border-length'></div>
+            <div class='circle decoration-circle size-large' id='circle-1'></div>
+            <div class='circle decoration-circle' id='circle-2'></div>
+            <div class='circle decoration-circle size-medium' id='circle-3'></div>
+            <div class='circle decoration-circle size-medium' id='circle-4'></div>
+            <div class='circle decoration-circle size-small' id='circle-5'></div>
+            <div class='circle decoration-circle size-small' id='circle-6'></div>
+
+
+            <img class='projects-banner' src='images/11377175_10203435304518305_4965010383617393659_n.jpg' alt='Project Banner'>
+        </div>
+    </div>
+</section>
+
+<!-- Previous Alumni -->
+<!-- 
+<section id='alumni'>
+    <div class='alumni-title-container'>
+        <h1 class='alumni-title'>PREVIOUS ALUMNI</h1>
+    </div>
+    <div class='alumni-gallery-container'>
+        <div class='alumni-gallery'>            
+                
+            <!- - Alumni Picture 1 - ->
+            <img src='images/kayla.png' alt='Kayla' class='alumni-picture'>
+
+            <!- - Alumni Picture 2 - ->
+            <img src='images/kayla.png' alt='Kayla' class='alumni-picture'>
+
+            <!- - Alumni Picture 3 - ->
+            <img src='images/kayla.png' alt='Kayla' class='alumni-picture'>
+
+            <!- - Alumni Picture 4 - ->
+            <img src='images/kayla.png' alt='Kayla' class='alumni-picture'>
+
+            <!- - Alumni Picture 5 - ->
+            <img src='images/kayla.png' alt='Kayla' class='alumni-picture'>
+        </div>
+</section> 
+-->
+<!-- Footer -->
+<footer id='contact-us'>
+    <div class='footer-container'>
+        <!-- Invisible divs that act like horizontal rules to left and right of comp sci logo -->
+        <div class='footer-outline'></div>
+        <div class='comp-sci-logo'><img src='images/css new logo.png' alt=''></div>
+        <div class='footer-outline'></div>
+        <div class='email-container'>
+            <ul>
+                <li>REACH US AT OUR EMAIL</li>
+                <li>css.cpp.edu@gmail.com</li>
+            </ul>
+            <!-- HTML Form for new club members to input their e-mail to be added to club mailing
+            list -->
+            <!-- 
+            <div class='email-form'>
+                <!- - placeholder action for PHP file to process user's inputted email to add to mailing list - ->
+                <form action=''>
+                    <ul>
+                        <li>BECOME A MEMBER</li>
+                        <!- - This is where users input their email - ->
+                        <li><input type='text' id='email-input' name='email' placeholder="Enter your email"></li>
+                    </ul>
+                    <input type='submit' id='email-submit'>
+                </form>
+            </div>
+        -->
+        </div>
+        <div class='css-socials'>
+            <ul>
+                <li>STAY IN THE LOOP</li>
+                <!-- Instagram link -->
+                <li>
+                    <a href='https://www.instagram.com/cppcss/' target='_blank'>
+                        <img src='images/instagram.svg' alt='instagram'>
+                    </a>
+                    <a class='socials-link' href='https://www.instagram.com/cppcss/' target='_blank'>
+                        cppcss
+                    </a>
+                </li>
+                <!-- Facebook link -->
+                <li>
+                    <a href='https://www.facebook.com/groups/cppcss/' target='_blank'>
+                        <img src='images/facebook.svg' alt='facebook'>
+                    </a>
+                    <a class='socials-link' href='https://www.facebook.com/groups/cppcss/' target='_blank'>
+                        cppcss
+                    </a>
+                </li>
+                <!-- Youtube link -->
+                <li>
+                    <a href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank'>
+                        <img src='images/youtube.svg' alt='youtube'>
+                    </a>
+                    <a class='socials-link' href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank'>
+                        Cal Poly Pomona - Computer Science Society
+                    </a>
+                </li>
+                <!-- Github link -->
+                <li>
+                    <a href='https://github.com/cpp-css' target='_blank'>
+                        <img src='images/github.svg' alt='github'>
+                    </a>
+                    <a class='socials-link' href='https://github.com/cpp-css' target='_blank'>
+                        cpp-css
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Footer navigation links for desktop -->
+        <div class='footer-nav-links'>
+            <ul>
+                <li>
+                    <a href='#top' class='navbar-link smoothScroll'>HOME</a>
+                </li>
+                <li>
+                    <a href='#about' class='navbar-link smoothScroll'>ABOUT</a>
+                </li>
+                <li>
+                    <a href='#e-board' class='navbar-link smoothScroll'>E-BOARD</a>
+                </li>
+                <li>
+                    <a href='#events' class='navbar-link smoothScroll'>EVENTS</a>
+                </li>
+                <li>
+                    <a href='#projects' class='navbar-link smoothScroll'>PROJECTS</a>
+                </li>
+                <!-- 
+                <li>
+                    <a href='#alumni' class='navbar-link smoothScroll'>ALUMNI</a>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!-- button to scroll to top for mobile -->
+        <a href='#top' class='top-button smoothScroll'>top</a>
+    </div>
+    <!-- small circle shapes for decoration above mobile footer banner -->
+    <div class='decoration-circle-container'>
+        <div class='circle decoration-circle size-medium' id='footer-circle-1'></div>
+        <div class='circle decoration-circle size-medium' id='footer-circle-2'></div>
+        <div class='circle decoration-circle size-medium' id='footer-circle-3'></div>
+        <div class='circle decoration-circle size-small' id='footer-circle-4'></div>
+        <div class='circle decoration-circle size-small' id='footer-circle-5'></div>
+        <div class='circle decoration-circle size-small' id='footer-circle-6'></div>
+    </div>
+    <!-- image for mobile design only -->
+    <img class='mobile-footer-banner' src='images/11377175_10203435304518305_4965010383617393659_n.jpg'
+    alt=''>
+    <div id='copyright'><p>COPYRIGHT 2020 COMPUTER SCIENCE SOCIETY. ALL RIGHTS RESERVED</p></div>
+</footer>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!-- javascripts -->
+<script src='javascripts/main.js'></script>
+</body>
+</html>
