@@ -5,7 +5,7 @@
   "main": "js/index.js",
   "scripts": {
     "start": "nodemon app",
-    "build": "node build"
+    "build": "npm install i --save && npm init -y"
   },
   "author": "Luke Dinh",
   "contributors": [
@@ -20,6 +20,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "googleapis": "^68.0.0",
+    "i": "^0.3.7",
     "save": "^2.4.0"
   },
   "devDependencies": {
